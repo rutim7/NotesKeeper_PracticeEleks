@@ -1,0 +1,19 @@
+ <div class="panel panel-default" > 
+  <div class="panel-heading">
+                <h4 class="panel-title">
+                     <label>Title:</label> {{note.title}}
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default btn-sm "><span class="glyphicon glyphicon-edit"></span></button>
+                        <button type="button" class="btn btn-default  btn-sm " (click)= "delete()" ><span class="glyphicon glyphicon-trash"></span></button>
+                    </div>
+                </h4>
+            </div>
+            <div class="panel-heading">
+          <h4 class="panel-title">
+            <label>Сategory:</label>  {{note.category}}
+          </h4>
+        </div>
+            <div class="panel-body">
+                {{note.text}}
+            </div>
+            </div>

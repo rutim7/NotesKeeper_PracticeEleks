@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="header">
+    <h3 class="text-muted">Notes Keeper!</h3>
+  </div>
+  <ul class="nav nav-pills">
+    <li class="active"><a ><span class="glyphicon glyphicon-pencil"></span> New Note</a></li>
+    <li><a ><span class="glyphicon glyphicon-th-list"></span> All Notes</a></li>
+  </ul>
+
+  <!--<ul class=" panel list-group">
+    <li class="list-group-item ">
+        <label>Last notes:</label>  
+             <notes-item *ngFor="let note of notes" [note]="note"> </notes-item>
+    </li>
+</ul>-->
+<note-form (added)="onNoteAdded($event)" ></note-form>
+  <notes-list [notes]="notes"></notes-list>
+  <!--<div class="footer">     </div>-->
+</div>

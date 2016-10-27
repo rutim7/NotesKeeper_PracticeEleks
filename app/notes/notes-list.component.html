@@ -1,0 +1,6 @@
+<ul class=" panel list-group">
+    <li class="list-group-item ">
+        <label>All notes:</label>  
+             <notes-item *ngFor="let note of notes" [note]="note" (deleted)="onNoteDeleted($event)" > </notes-item>
+    </li>
+</ul>

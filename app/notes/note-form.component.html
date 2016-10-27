@@ -1,0 +1,20 @@
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="form-group"> 
+        <label>Title:</label>
+        <input type="text" class="form-control" placeholder="title of note" 
+          #titleInput>
+      </div>
+      <div class="form-group">
+        <label>Сategory:</label>
+        <input type="text" class="form-control" placeholder="category of note" 
+          #categoryInput>
+      </div>
+      <div class="form-group">
+        <label for="Text">Text:</label>
+        <textarea class="form-control" placeholder="Enter the text of  note !" rows="5" 
+          #textInput></textarea>
+      </div>
+      <button type="button"  class="btn btn-success pull-right " (click)="add(titleInput.value,categoryInput.value,textInput.value); titleInput.value=''; categoryInput.value=''; textInput.value=''" ><span class="glyphicon glyphicon-plus"></span> Add new </button>
+    </div>
+  </div>

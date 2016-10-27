@@ -1,0 +1,47 @@
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+   padding-top: 19px;
+    margin-bottom: 30px;
+}
+
+
+/*.footer,*/
+.header {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+.header h3 {
+  padding-bottom: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+.nav-pills{
+  margin-left:120px; 
+}
+.panel{
+width: 80%;
+ margin: 20 auto;
+}
+
+.panel-title {
+    font-size: 14px;
+}
+
+/*
+.footer {
+   
+position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}*/
+
+}
