@@ -1,12 +1,25 @@
+
 <div class="container">
   <div class="header">
     <h3 class="text-muted">Notes Keeper!</h3>
   </div>
   <ul class="nav nav-pills">
-    <li class="active"><a ><span class="glyphicon glyphicon-pencil"></span> New Note</a></li>
-    <li><a ><span class="glyphicon glyphicon-th-list"></span> All Notes</a></li>
+    <li><a  routerLink = "newNote" ><span class="glyphicon glyphicon-pencil"></span> New Note</a></li>
+    <li><a  routerLink = "allNotes"  ><span class="glyphicon glyphicon-th-list"></span> All Notes</a></li>
   </ul>
 
+  <!--<ngb-tabset>
+  <ngb-tab title="One">
+    <template ngbTabContent>
+      <p>These tabs are displayed as pills...</p>
+    </template>
+  </ngb-tab>
+  <ngb-tab title="Two">
+    <template ngbTabContent>
+      <p>Because default values have been customized.</p>
+    </template>
+  </ngb-tab>
+</ngb-tabset>-->
   <!--<ul class=" panel list-group">
     <li class="list-group-item ">
         <label>Last notes:</label>  
@@ -15,5 +28,6 @@
 </ul>-->
 <note-form (added)="onNoteAdded($event)" ></note-form>
   <notes-list [notes]="notes"></notes-list>
+  <!--<router-outlet ></router-outlet>-->
   <!--<div class="footer">     </div>-->
 </div>

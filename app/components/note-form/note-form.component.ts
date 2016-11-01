@@ -1,11 +1,11 @@
 import { Component,Output,EventEmitter } from '@angular/core';
-import { Note }	from './note';
+import { Note }	from '../shared/note.model';
 
 
 @Component({
 	selector: 'note-form',
-	templateUrl: './app/notes/note-form.component.html',
-	styleUrls: ['./app/notes/note-form.component.css','./app/app.component.css']
+	templateUrl: './app/components/note-form/note-form.component.html',
+	styleUrls: ['./app/components/note-form/note-form.component.css','./app/app.component.css']
 })
 
 export class NoteFormComponent  {

@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
-import { Note } from './note';
+import { Note } from '../shared/note.model';
 
 @Component({
 	selector: 'notes-list',
-	templateUrl: './app/notes/notes-list.component.html',
-	styleUrls: ['./app/notes/notes-list.component.css','./app/app.component.css'],
+	templateUrl: './app/components/note-list/note-list.component.html',
+	styleUrls: ['./app/components/note-list/note-list.component.css','./app/app.component.css'],
 	
 })
 
