@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Note } from '../shared/note.model';
+import { Note } from '../../shared/note.model';
 
 @Component({
 	selector: 'notes-item',
@@ -7,7 +7,7 @@ import { Note } from '../shared/note.model';
 	styleUrls: ['./app/components/note-item/note-item.component.css','./app/app.component.css']
 })
 
-export class NotesItemComponent {
+export class NoteItemComponent {
 	@Input ()  note: Note;
 	@Output ()  deleted = new EventEmitter();
 	 

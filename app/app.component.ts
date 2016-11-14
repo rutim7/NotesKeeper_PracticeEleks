@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { Note } from './components/shared/note.model';
+
+import { NoteService } from './shared/note.service';
+import { Note } from './shared/note.model';
+import { notes } from './shared/note.data';
 
 @Component({
     selector: 'my-app',
@@ -9,16 +12,5 @@ import { Note } from './components/shared/note.model';
 })
 
 export class AppComponent {
-    
-    notes: Note[];
-
-    constructor() {
-
-        this.notes = [];
-    }
-
-    onNoteAdded(note: Note) {
-        this.notes.push(note);
-
-    }
+    constructor() {  }
 }       

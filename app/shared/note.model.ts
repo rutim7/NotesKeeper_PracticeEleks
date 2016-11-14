@@ -1,4 +1,10 @@
-export class Note{
+export interface INote{
+    title: string;
+    category:string;
+    text:string;
+}
+
+export class Note implements INote {
     title: string;
     category:string;
     text:string;

@@ -1,5 +1,6 @@
 import { Component,Output,EventEmitter } from '@angular/core';
-import { Note }	from '../shared/note.model';
+import { Note }	from '../../shared/note.model';
+import { NoteService } from '../../shared/note.service';
 
 
 @Component({
@@ -10,10 +11,13 @@ import { Note }	from '../shared/note.model';
 
 export class NoteFormComponent  {
   @Output() added = new EventEmitter();
+   
+constructor(private noteService:NoteService){}
 
    add(title: string, category:string, text:string){
 		  if(title && category && text){
-				this.added.emit(new Note(title,category,text));
+			  let note = new Note(title,category,text);
+				this.noteService.addNote(note);
 		  }
 
    }

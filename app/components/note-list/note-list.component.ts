@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { Note } from '../shared/note.model';
+import { INote, Note } from '../../shared/note.model';
+import { NoteService } from '../../shared/note.service';
 
 @Component({
 	selector: 'notes-list',
@@ -9,16 +10,18 @@ import { Note } from '../shared/note.model';
 	
 })
 
-export class NotesListComponent  {
-	@Input () notes: Note[];
+export class NoteListComponent implements OnInit  {
+	 notes: INote[];
+	
+	constructor(private noteService:NoteService){}
 
-	onNoteDeleted(note: Note){
-		 if(note){
-			 let index = this.notes.indexOf(note);
-			 if (index>-1){
-				 this.notes.splice(index,1);
-			 }
-		 }
+	ngOnInit(){
+    this.noteService.getNotes()
+					.then(notes => this.notes = notes );
+				}
+
+	onNoteDeleted(note: INote){
+		this.noteService.deleteNote(note);
 	}	
 
 }
