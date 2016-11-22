@@ -1,10 +1,12 @@
 export interface INote{
+     id: number;
     title: string;
     category:string;
     text:string;
 }
 
 export class Note implements INote {
+     id: number;
     title: string;
     category:string;
     text:string;
